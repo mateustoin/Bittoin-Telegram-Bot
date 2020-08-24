@@ -15,6 +15,7 @@ dispatcher = updater.dispatcher
 help_message = '/start - Mensagem de boas vindas\n'
 help_message = help_message + '/caps - Toda a mensagem depois do comando fica maiúscula\n'
 help_message = help_message + '/image - Envia foto de um robô tocando teclado\n'
+help_message = help_message + 'Mensagem normal - Echo da mensagem com ! no final\n'
 
 def help(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, 
