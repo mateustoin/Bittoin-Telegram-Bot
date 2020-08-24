@@ -1,6 +1,5 @@
 # Bittoin-Telegram-Bot
 
-
 # Funcionalidades
 
 Descrição das funcionalidades que o bot tem/terá.
