@@ -1,53 +1,17 @@
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-import telegram
-import requests
-import logging
-import token_code
 from googletrans import Translator
-
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                     level=logging.INFO)
-
-class Bot(object):
-    
-    def __init__(self):
-        bot_token = token_code.token
-        
-        self.updater = Updater(token=bot_token, use_context=True)
-        self.dispatcher = self.updater.dispatcher
-        
-        self.pokedex = Pokedex()
-        
-    def run(self):
-        start_handler = CommandHandler('start', self.start)
-        pokedex_handler = CommandHandler('pokedex', self.pokedex.pokedex)
-        habilidades_handler = CommandHandler('habilidades', self.pokedex.habilidades)
-        moves_handler = CommandHandler('moves', self.pokedex.moves)
-        
-        self.dispatcher.add_handler(start_handler)
-        self.dispatcher.add_handler(pokedex_handler)
-        self.dispatcher.add_handler(habilidades_handler)
-        self.dispatcher.add_handler(moves_handler)
-        
-        self.updater.start_polling()
-        
-
-    '''
-        IMPLEMENTAÇÃO DOS COMANDOS
-    '''
-    def start(self, update, context):
-        context.bot.send_message(chat_id=update.effective_chat.id, 
-                                text="Bem vindo ao bot da transmissão (Ao vivo, não de covid)\nAcesse twitch.tv/bittoin para mais informações!")
-        
+import requests
 
 class Pokedex(object):
     def __init__(self):
         self.url_base = 'https://pokeapi.co/api/v2/pokemon/'
     
     def pokedex(self, update, context):
-        print('Requisição do pokedex')
+        if not context.args:
+            context.bot.send_message(chat_id=update.effective_chat.id, 
+                                text='Esqueceu o nome do pokemon!')
+            return
+        
         pokemon = context.args[0]
-        print('Pokemon: ' + pokemon)
         
         requisicao = requests.get(url= self.url_base + pokemon)
         
@@ -75,6 +39,11 @@ class Pokedex(object):
             
     
     def habilidades(self, update, context):
+        if not context.args:
+            context.bot.send_message(chat_id=update.effective_chat.id, 
+                                text='Esqueceu o nome do pokemon!')
+            return
+        
         pokemon = context.args[0]
         
         requisicao = requests.get(url= self.url_base + pokemon)
@@ -107,9 +76,14 @@ class Pokedex(object):
             
 
     def moves(self, update, context):
-        print('Requisição do pokedex')
+        if not context.args:
+            context.bot.send_message(chat_id=update.effective_chat.id, 
+                                text='Esqueceu o nome do pokemon!')
+            return
+        
+        #print('Requisição dos moves!')
         pokemon = context.args[0]
-        print('Pokemon: ' + pokemon)
+        #print('Pokemon: ' + pokemon)
         
         requisicao = requests.get(url= self.url_base + pokemon)
         
@@ -129,6 +103,3 @@ class Pokedex(object):
             for index in range(5):
                 context.bot.send_message(chat_id=update.effective_chat.id, 
                                         text=move[index])
-        
-bot = Bot()
-bot.run()

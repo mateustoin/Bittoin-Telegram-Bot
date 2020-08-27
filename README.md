@@ -1,7 +1,7 @@
 # Bittoin-Telegram-Bot
 
 <p>
-    Este bot multifuncional pode fazer de tudo um pouco! É uma pokedex, encurtador de URL e até pesquisador de wallpaper (mais funcinalidades ainda estão sendo discutidas). Está sendo desenvolvido na live do <a href="twitch.tv/bittoin">meu canal</a> com o objetivo de todos aprenderem diversas técnicas, funções e implementação de ideias dentro de apenas um projeto.
+    Este bot multifuncional pode fazer de tudo um pouco! É uma pokedex, encurtador de URL e até pesquisador de wallpaper (mais funcinalidades ainda estão sendo discutidas). Está sendo desenvolvido na live do <a href="twitch.tv/bittoin">meu canal</a> com o objetivo de todos aprenderem diversas técnicas, funções e implementação de ideias dentro de apenas um projeto. Além disso, não coleta nenhum dado do usuário que interage com ele no Telegram, apenas responde com as requisições feitas. Só serão coletados dados se a funcionalidade exigir isto.
 </p>
 
 <p>
