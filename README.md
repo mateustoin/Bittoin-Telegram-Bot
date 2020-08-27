@@ -12,7 +12,7 @@
 
 Descrição das funcionalidades que o bot tem/terá.
 
-## Pokedéx
+## Pokédex
 
 Quando o comando de pokemon for acionado, retornará:
 
