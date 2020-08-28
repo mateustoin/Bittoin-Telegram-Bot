@@ -45,18 +45,18 @@ Descrição das funcionalidades que o bot tem/terá.
 
 ## Funcionalidade: Ferramenta pra te tirar do tédio
 
-- [] Criar a chamada do comando
-- [] Criar os botões para acionar o comando
-- [] Criar chamada para API a partir do tipo
-- [] Conectar cada chamada a seu respectivo botão
-- [] Organiza mensagem de saída para o usuário
+- [x] Criar a chamada do comando
+- [x] Criar os botões para acionar o comando
+- [x] Criar chamada para API a partir do tipo
+- [x] Conectar cada chamada a seu respectivo botão
+- [x] Organiza mensagem de saída para o usuário
 
 ## Funcionalidade: Encurtador de URL
 
-- [] Cria a chamada do comando
-- [] Realiza aquisição da URL através dos argumentos do comando
-- [] Realiza uma requisição na API com a URL
-- [] Organiza mensagem de saída para o usuário com a URL Encurtada
+- [x] Cria a chamada do comando
+- [x] Realiza aquisição da URL através dos argumentos do comando
+- [x] Realiza uma requisição na API com a URL
+- [x] Organiza mensagem de saída para o usuário com a URL Encurtada
 
 <p id="uso" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/5.png?raw=true">&nbsp;&nbsp;
