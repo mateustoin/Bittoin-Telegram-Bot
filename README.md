@@ -33,8 +33,6 @@ Descrição das funcionalidades que o bot tem/terá.
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/4.png?raw=true">&nbsp;&nbsp;
 </p>
 
-Quando o comando de pokemon for acionado, retornará:
-
 - [x] Imagem do pokemon
 - [x] Número da pokedéx
 - [x] Nome
@@ -44,6 +42,21 @@ Quando o comando de pokemon for acionado, retornará:
 - [x] Colocar as habilidades e suas respectivas descrições em outro comando
 - [x] Utilizar markdown para formatar o texto de saída
 - [x] Listar/Filtrar os possíveis movimentos do pokemon
+
+## Funcionalidade: Ferramenta pra te tirar do tédio
+
+- [] Criar a chamada do comando
+- [] Criar os botões para acionar o comando
+- [] Criar chamada para API a partir do tipo
+- [] Conectar cada chamada a seu respectivo botão
+- [] Organiza mensagem de saída para o usuário
+
+## Funcionalidade: Encurtador de URL
+
+- [] Cria a chamada do comando
+- [] Realiza aquisição da URL através dos argumentos do comando
+- [] Realiza uma requisição na API com a URL
+- [] Organiza mensagem de saída para o usuário com a URL Encurtada
 
 <p id="uso" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/5.png?raw=true">&nbsp;&nbsp;

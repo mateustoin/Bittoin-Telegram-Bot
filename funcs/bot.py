@@ -33,6 +33,9 @@ class Bot(object):
         
         self.updater.start_polling()
         
+        # Roda o bot até apertar CTRL + C ou receber um SIGNAL
+        self.updater.idle()
+        
 
     '''
         IMPLEMENTAÇÃO DOS COMANDOS
