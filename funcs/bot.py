@@ -39,6 +39,7 @@ class Bot(object):
         # Comandos do desentediador
         bored_handler = CommandHandler('bored', self.bored.bored)
         button_callback = CallbackQueryHandler(self.bored.button)
+        participantes_handler = CommandHandler('participantes', self.bored.participantes)
         
         # Dispatchers do bot
         self.dispatcher.add_handler(start_handler)
@@ -54,6 +55,7 @@ class Bot(object):
         # Dispatchers do desentediador
         self.dispatcher.add_handler(bored_handler)
         self.dispatcher.add_handler(button_callback)
+        self.dispatcher.add_handler(participantes_handler)
         
         # Inicia a execução do bot
         self.updater.start_polling()

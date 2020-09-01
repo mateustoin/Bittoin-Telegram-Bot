@@ -10,12 +10,23 @@
     Abaixo você poderá ver quais API's e tecnologias foram utilizadas no projeto, instruções de instalação dos pacotes necessários e de uso da aplicação. Quando o projeto for finalizado ele irá rodar diretamente na nuvem, garantindo que todos possam usurfruir a qualquer momento. Basta adicionar <i>@BittoinLiveBot</i> no telegram e se divertir!
 </p>
 
+<p>
+    Lista de API's utilizadas no desenvolvimento do BOT
+</p>
+
+<ol>
+    <li> Alo alo testando
+    <li> Teste 2
+</ol>
+
 # Sumário
 1. [Introdução](#introducao)
 2. [Como o projeto está organizado](#estrutura)
 3. [To-Do List das Funcionalidades](#todo)
     - [Pokédex](#pokedex)
 4. [Como utilizar o Bot e Resultados](#uso)
+
+# Ferramentas e recursos
 
 <p id="estrutura" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/2.png?raw=true">&nbsp;&nbsp;
