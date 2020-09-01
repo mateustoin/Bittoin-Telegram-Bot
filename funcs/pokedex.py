@@ -8,7 +8,7 @@ class Pokedex(object):
     def pokedex(self, update, context):
         if not context.args:
             context.bot.send_message(chat_id=update.effective_chat.id, 
-                                text='Esqueceu o nome do pokemon!')
+                                text='Esqueceu o nome ou número do pokemon!')
             return
         
         pokemon = context.args[0].lower()
@@ -17,11 +17,12 @@ class Pokedex(object):
         
         if (requisicao.status_code != 200):
             context.bot.send_message(chat_id=update.effective_chat.id, 
-                                text='Nome do pokemon incorreto, tente novamente!')
+                                text='Nome ou número do pokemon incorreto, tente novamente!')
         else:
             num_pokedex = requisicao.json()['id']
             peso = requisicao.json()['weight']
             photo_url = requisicao.json()['sprites']['front_default']
+            nome_pokemon = requisicao.json()['name']
             habilidades = ''
             
             for ab in requisicao.json()['abilities']:
@@ -31,7 +32,7 @@ class Pokedex(object):
                                 photo=photo_url)
             
             context.bot.send_message(chat_id=update.effective_chat.id, 
-                                    text='<b>Nome do Pokemon</b>: ' + pokemon 
+                                    text='<b>Nome do Pokemon</b>: ' + nome_pokemon 
                                     + '\n<b>Peso do pokemon</b>: ' + str(peso)
                                     + '\n<b>Número na pokedéx</b>: ' + str(num_pokedex)
                                     + '\n<b>Habilidades</b>: \n' + str(habilidades),
