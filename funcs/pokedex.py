@@ -22,7 +22,7 @@ class Pokedex(object):
             num_pokedex = requisicao.json()['id']
             peso = requisicao.json()['weight']
             photo_url = requisicao.json()['sprites']['front_default']
-            nome_pokemon = requisicao.json()['name']
+            nome_pokemon = requisicao.json()['name'].capitalize()
             habilidades = ''
             
             for ab in requisicao.json()['abilities']:
