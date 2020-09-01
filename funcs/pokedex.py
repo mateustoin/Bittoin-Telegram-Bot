@@ -11,7 +11,7 @@ class Pokedex(object):
                                 text='Esqueceu o nome do pokemon!')
             return
         
-        pokemon = context.args[0]
+        pokemon = context.args[0].lower()
         
         requisicao = requests.get(url= self.url_base + pokemon)
         
@@ -44,7 +44,7 @@ class Pokedex(object):
                                 text='Esqueceu o nome do pokemon!')
             return
         
-        pokemon = context.args[0]
+        pokemon = context.args[0].lower()
         
         requisicao = requests.get(url= self.url_base + pokemon)
         
@@ -82,7 +82,7 @@ class Pokedex(object):
             return
         
         #print('Requisição dos moves!')
-        pokemon = context.args[0]
+        pokemon = context.args[0].lower()
         #print('Pokemon: ' + pokemon)
         
         requisicao = requests.get(url= self.url_base + pokemon)
