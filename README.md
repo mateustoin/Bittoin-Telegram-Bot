@@ -15,8 +15,9 @@
 </p>
 
 <ol>
-    <li> Alo alo testando
-    <li> Teste 2
+    <li> <a href="https://pokeapi.co/">PokéAPI (Pokédex aberto)</a>
+    <li> <a href="https://rel.ink/">Relink (Encurtador de URL grátis)</a>
+    <li> <a href="https://www.boredapi.com/">Bored API</a>
 </ol>
 
 # Sumário
