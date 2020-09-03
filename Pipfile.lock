@@ -127,10 +127,10 @@
         },
         "hstspreload": {
             "hashes": [
-                "sha256:3129613419c13ea62411ec7375d79840e28004cbb6a585909ddcbeee401bea14",
-                "sha256:c96401eca4669340b423abd711d2d5d03ddf0685461f95e9cfe500d5e9acf3d2"
+                "sha256:0ecd9557e863fb2f9c7a82617a69e961bc0d287fe9c0d906f613647a8b2f9e57",
+                "sha256:aa0b230cb39a2b407310a7fe18b07539bb1b9bc8aa6f042b4473d6e00f381758"
             ],
-            "version": "==2020.8.25"
+            "version": "==2020.9.2"
         },
         "httpcore": {
             "hashes": [
