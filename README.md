@@ -91,13 +91,71 @@
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/2.png?raw=true">&nbsp;&nbsp;
 </p>
 
-<b>Em construção.</b>
+<p>
+    Nesse tópico será explicado como o projeto está estruturado, entre os arquivos e como os códigos se conectam, para que todos entendam e possam modificar da forma que for necessária. A forma de implementar é explicada já na própria documentação das bibliotecas, portanto o foco será na forma em que foi organizado neste projeto. Na figura a seguir é possível observar como os arquivos estão estruturados e a partir disso entraremos nas conexões entre eles (pasta img ignorada pois contém apenas as imagens utilizadas neste README).  
+</p>
+
+<p id="tree" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/tree.png?raw=true">&nbsp;&nbsp;
+</p>
+
+<p>
+    O projeto pode ser dividido em três seções:
+    <ol>
+        <li> Códigos: <b>main.py e pasta funcs</b>
+        <li> Exemplos: <b>pasta sample</b>
+        <li> Pacotes: <b>Procfile, requirements.txt, Pipfile e Pipfile.lock</b>
+    </ol>
+</p>
+
+## Códigos
+
+<p>
+    Toda a organização do bot e códigos das funcionalidades estão dentro do diretório <code>funcs/</code>. O arquivo python <code>main.py</code> contém apenas a criação do objeto da classe <b>Bot</b> que está dentro de <code>bot.py</code> para realizar a execução do bot com a função <code>run()</code>.
+</p>
+
+<p>
+    Cada funcionalidade criada para este projeto tem sua própria classe, <code>class Pokedex()</code>, <code>class Bored()</code> e <code>class Urlshort()</code>. Para manter o código organizado e fácil para manutenção, cada comando existente no bot está lotado nos métodos da classe. Na seção de uso do bot você deve notar que os nomes dos métodos são iguais aos nomes dos comandos do próprio bot, para que não haja confusões em relação a implementação de cada coisa. Como foram utilizadas algumas API's para a coleta de dados do bot, então cada classe também tem sua URL base, a fim de separar bem cada API e organizar suas respectivas requisições e particularidades. Um exemplo de implementação de comando pode ser visto a seguir, com o comando mais básico do bot, utilizando a função <code>send_message()</code> com o texto escrito, para a própria pessoa que chamou o comando.
+</p>
+
+```python
+def start(self, update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Bem vindo ao bot da transmissão (Ao vivo, não de covid)\nAcesse twitch.tv/bittoin para mais informações!")
+```
+
+<p>
+    Por último temos a classe principal do bot, no arquivo <code>bot.py</code>, que importa todas as classes de funcionalidades citadas anteriormente, cria seus respectivos objetos de classe e usa os métodos para gerenciar os comandos implementados e utilizados no chat do bot online. Depois que temos um objeto da classe da nossa funcionalidade, criamos um handler, onde serão passados o método que será chamado pelo bot e seu comando, como pode ser visto a seguir:
+</p>
+
+```python
+pokedex_handler = CommandHandler('pokedex', self.pokedex.pokedex)
+```
+
+<p>
+    O primeiro argumento é o nome do comando que será acionado no chat e o segundo o método que será chamado ao ser acionado. Após isso utilizamos o `dispatcher` do bot, que é responsável por gerenciar e fazer funcionar todos os handlers criados, a fim de responder a todas as requisições de usuários e manter a organização interna das chamadas. 
+</p>
+
+```python
+self.dispatcher.add_handler(pokedex_handler)
+```
+
+<p>
+    No final do processo temos a execução do bot propriamente dito, com todas as suas funcionalidades adicionadas ao `dispatcher` e aguarda pela finalização.
+</p>
+
+```python
+# Inicia a execução do bot
+self.updater.start_polling()
+
+# Roda o bot até apertar CTRL + C ou receber um SIGNAL
+self.updater.idle()
+```
 
 <p id="todo" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/3.png?raw=true">&nbsp;&nbsp;
 </p>
 
-Descrição das funcionalidades que o bot tem/terá.
+Aqui estão listados todas as funcionalidades que foram discutidas durante as lives, escritas e preenchidas. Cada um desses tópicos foi implementado e testado ao vivo. A ideia é que durante as lives o público ajuda na criação das funcionalidades, determinando os requisitos e como vai ficar no final.
 
 ## Funcionalidade: Ferramenta de pokédex
 
@@ -131,36 +189,7 @@ Descrição das funcionalidades que o bot tem/terá.
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/7.png?raw=true">&nbsp;&nbsp;
 </p>
 
-.
-├── funcs
-│   ├── bored.py
-│   ├── bot.py
-│   ├── __init__.py
-│   ├── pokedex.py
-│   ├── token_code.py
-│   └── url_short.py
-├── img
-│   ├── 1.png
-│   ├── 2.png
-│   ├── 3.png
-│   ├── 4.png
-│   ├── 5.png
-│   ├── 6.png
-│   └── 7.png
-├── __init__.py
-├── main.py
-├── Pipfile
-├── Pipfile.lock
-├── Procfile
-├── README.md
-├── requirements.txt
-├── sample
-│   ├── inlinekeyboard.py
-│   ├── Mateus-Antonio-IoT-robotica-programação.jpg
-│   └── sample..py
-└── tree.txt
-
-<b>Em construção. Tudo sobre como usar o bot e afins</b>
+<b>Em construção. Tudo sobre uso do bot e afins</b>
 
 <p id="pokedex" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/4.png?raw=true">&nbsp;&nbsp;
