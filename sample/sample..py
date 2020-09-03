@@ -1,12 +1,12 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
-import token_code
+from funcs.token_code import token
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
 # Insira aqui o token do seu bot!
-bot_token = token_code.token
+bot_token = token
 
 updater = Updater(token=bot_token, use_context=True)
 

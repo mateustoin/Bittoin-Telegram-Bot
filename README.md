@@ -99,10 +99,6 @@
 
 Descrição das funcionalidades que o bot tem/terá.
 
-<p id="pokedex" align='center'>
-    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/4.png?raw=true">&nbsp;&nbsp;
-</p>
-
 ## Funcionalidade: Ferramenta de pokédex
 
 - [x] Imagem do pokemon
@@ -132,7 +128,48 @@ Descrição das funcionalidades que o bot tem/terá.
 - [x] Organiza mensagem de saída para o usuário com a URL Encurtada
 
 <p id="uso" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/7.png?raw=true">&nbsp;&nbsp;
+</p>
+
+.
+├── funcs
+│   ├── bored.py
+│   ├── bot.py
+│   ├── __init__.py
+│   ├── pokedex.py
+│   ├── token_code.py
+│   └── url_short.py
+├── img
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   ├── 4.png
+│   ├── 5.png
+│   ├── 6.png
+│   └── 7.png
+├── __init__.py
+├── main.py
+├── Pipfile
+├── Pipfile.lock
+├── Procfile
+├── README.md
+├── requirements.txt
+├── sample
+│   ├── inlinekeyboard.py
+│   ├── Mateus-Antonio-IoT-robotica-programação.jpg
+│   └── sample..py
+└── tree.txt
+
+<b>Em construção. Tudo sobre como usar o bot e afins</b>
+
+<p id="pokedex" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/4.png?raw=true">&nbsp;&nbsp;
+</p>
+
+<p id="url" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/5.png?raw=true">&nbsp;&nbsp;
 </p>
 
-<b>Em construção. Tudo sobre como usar o bot e afins</b>
+<p id="bored" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/6.png?raw=true">&nbsp;&nbsp;
+</p>
