@@ -38,6 +38,8 @@
 
 > Versão python utilizada no projeto: Python 3.8
 
+---
+
 # Sumário
 1. [Introdução](#introducao)
 2. [Como o projeto está organizado](#estrutura)
@@ -85,6 +87,8 @@
 > 
 > <code>python main.py</code>
 
+---
+
 # Ferramentas e recursos
 
 <p id="estrutura" align='center'>
@@ -102,9 +106,9 @@
 <p>
     O projeto pode ser dividido em três seções:
     <ol>
-        <li> Códigos: <b>main.py e pasta funcs</b>
-        <li> Exemplos: <b>pasta sample</b>
-        <li> Pacotes: <b>Procfile, requirements.txt, Pipfile e Pipfile.lock</b>
+        <li> <b>Códigos</b>: main.py e pasta funcs
+        <li> <b>Exemplos</b>: pasta sample
+        <li> <b>Pacotes</b>: Procfile, requirements.txt, Pipfile e Pipfile.lock
     </ol>
 </p>
 
@@ -132,7 +136,7 @@ pokedex_handler = CommandHandler('pokedex', self.pokedex.pokedex)
 ```
 
 <p>
-    O primeiro argumento é o nome do comando que será acionado no chat e o segundo o método que será chamado ao ser acionado. Após isso utilizamos o `dispatcher` do bot, que é responsável por gerenciar e fazer funcionar todos os handlers criados, a fim de responder a todas as requisições de usuários e manter a organização interna das chamadas. 
+    O primeiro argumento é o nome do comando que será acionado no chat e o segundo o método que será chamado ao ser acionado. Após isso utilizamos o <code>dispatcher</code> do bot, que é responsável por gerenciar e fazer funcionar todos os handlers criados, a fim de responder a todas as requisições de usuários e manter a organização interna das chamadas. 
 </p>
 
 ```python
@@ -140,7 +144,7 @@ self.dispatcher.add_handler(pokedex_handler)
 ```
 
 <p>
-    No final do processo temos a execução do bot propriamente dito, com todas as suas funcionalidades adicionadas ao `dispatcher` e aguarda pela finalização.
+    No final do processo temos a execução do bot propriamente dito, com todas as suas funcionalidades adicionadas ao <code>dispatcher</code> e aguarda pela finalização.
 </p>
 
 ```python
@@ -150,6 +154,26 @@ self.updater.start_polling()
 # Roda o bot até apertar CTRL + C ou receber um SIGNAL
 self.updater.idle()
 ```
+
+## Exemplos
+
+<p>
+    A pasta <code>sample/</code> possui os arquivos <b>sample.py</b> e <b>inlinekeyboard.py</b>. O <b>sample.py</b> possui os primeiros testes realizados no bot, no início da live, para testar como funcionam as funções da biblioteca de telegram para python, a fim de descobrir e validar algumas propriedades. Você pode notar que como está tudo em apenas um arquivo, fica bagunçado e difícil de separar, por isso a organização dos códigos em <code>funcs/</code> foi adotada. Em <b>inlinekeyboard.py</b> o exemplo foi retirado direto da documentação da biblioteca, com o objetivo de testar teclas/botões no chat do telegram, para implementar a função da Bored API.
+</p>
+
+## Pacotes
+
+<p>
+    A instalação dos pacotes já foi explicada anteriormente na seção de Instalações, portanto o foco será no arquivo <code>Procfile</code>. O Procfile é o que será executado na nuvem, através da plataforma <a href="https://www.heroku.com/">Heroku</a>. É um arquivo simples e contém o simples comando:
+</p>
+
+> worker: python main.py
+
+<p>
+    Este comando simplesmente aloca uma instância do servidor na nuvem (worker) para executar o nosso bot, através do arquivo <code>main.py</code>, que ativa a execução.
+</p>
+
+---
 
 <p id="todo" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/3.png?raw=true">&nbsp;&nbsp;
@@ -185,11 +209,19 @@ Aqui estão listados todas as funcionalidades que foram discutidas durante as li
 - [x] Realiza uma requisição na API com a URL
 - [x] Organiza mensagem de saída para o usuário com a URL Encurtada
 
+---
+
 <p id="uso" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/7.png?raw=true">&nbsp;&nbsp;
 </p>
 
-<b>Em construção. Tudo sobre uso do bot e afins</b>
+<p>
+    Nesta seção serão mostrados os resultados obtidos com o bot e casos de uso para cada funcionalidade. Aproveite e adicione o bot no telegram e teste também! Basta procurar por <code>@BittoinLiveBot</code> e começar a digitar os comandos no chat.
+</p>
+
+<p>
+    Se quiser ver uma demonstração completa e mais explicada de como tudo funciona, visita <a href="https://www.instagram.com/matteus_antonio/">meu Instagram</a> ou <a>meu canal do YouTube</a> que lá vai ter vídeos no IGTV/Canal com tudo e mais um pouco!
+</p>
 
 <p id="pokedex" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/4.png?raw=true">&nbsp;&nbsp;
@@ -202,3 +234,5 @@ Aqui estão listados todas as funcionalidades que foram discutidas durante as li
 <p id="bored" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/6.png?raw=true">&nbsp;&nbsp;
 </p>
+
+---
