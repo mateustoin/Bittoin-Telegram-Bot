@@ -1,20 +1,32 @@
+# Import das classes utilizadas da biblioteca do python para telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
 import logging
 
 # Token do bot fornecido pelo @BotFather
 from funcs.token_code import token
 
-# Funcionalidades
+# Import das funcionalidades implementadas
 from funcs.pokedex import Pokedex
 from funcs.url_short import Urlshort
 from funcs.bored import Bored
 
+# Define padrão de log
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
 class Bot(object):
+    """[Resumo]
+    A classe bot possui a estrutura necessária para utilizar os métodos 
+    das classes das funcionalidades e configurar os comandos que serão
+    exibidos no bot. 
+    """
     
     def __init__(self):
+        """[Resumo]
+        O método construtor define o token do bot, cria um Updater com o token, inicializa
+        o dispatcher, que é o responsável por gerenciar todos os comandos e ações, e enfim,
+        também cria os objetos de classe das funcionalidades.
+        """
         bot_token = token
         
         self.updater = Updater(token=bot_token, use_context=True)
@@ -25,6 +37,9 @@ class Bot(object):
         self.bored = Bored()
         
     def run(self):
+        """[Resumo]
+        Função cria todos os comandos do bot, são jogados no dispatcher e depois inicializado.
+        """
         # Comandos básicos do bot
         start_handler = CommandHandler('start', self.start)
         
@@ -65,7 +80,7 @@ class Bot(object):
         
 
     '''
-        IMPLEMENTAÇÃO DOS COMANDOS
+        IMPLEMENTAÇÃO DOS COMANDOS BÁSICOS DO BOT
     '''
     def start(self, update, context):
         context.bot.send_message(chat_id=update.effective_chat.id, 
