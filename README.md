@@ -223,16 +223,80 @@ Aqui estão listados todas as funcionalidades que foram discutidas durante as li
     Se quiser ver uma demonstração completa e mais explicada de como tudo funciona, visita <a href="https://www.instagram.com/matteus_antonio/">meu Instagram</a> ou <a>meu canal do YouTube</a> que lá vai ter vídeos no IGTV/Canal com tudo e mais um pouco!
 </p>
 
+## Comando <code>/start</code>
+
+<p>
+    O comando <code>/start</code> exibe apenas uma mensagem de boas vindas.
+</p>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/start.gif?raw=true">&nbsp;&nbsp;
+</p>
+
 <p id="pokedex" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/4.png?raw=true">&nbsp;&nbsp;
+</p>
+
+<p>
+    Aqui são apresentados todos os comandos referentes à funcionalidade do pokédex.
+</p>
+
+## Comando <code>/pokedex nome_pokemon</code>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/pokedex_nome.gif?raw=true">&nbsp;&nbsp;
+</p>
+
+## Comando <code>/pokedex numero_pokemon</code>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/pokedex_num.gif?raw=true">&nbsp;&nbsp;
+</p>
+
+## Comando <code>/habilidades nome_num_pokemon</code>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/pokedex_habilidades.gif?raw=true">&nbsp;&nbsp;
+</p>
+
+## Comando <code>/moves nome_num_pokemon</code>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/pokedex_moves.gif?raw=true">&nbsp;&nbsp;
 </p>
 
 <p id="url" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/5.png?raw=true">&nbsp;&nbsp;
 </p>
 
+<p>
+    Aqui são apresentados todos os comandos referentes à funcionalidade do encurtador de URL.
+</p>
+
+## Comando <code>/url link</code>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/url.gif?raw=true">&nbsp;&nbsp;
+</p>
+
 <p id="bored" align='center'>
     <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/6.png?raw=true">&nbsp;&nbsp;
+</p>
+
+<p>
+    Aqui são apresentados todos os comandos referentes à funcionalidade da ferramenta que te tira do tédio.
+</p>
+
+## Comando <code>/bored</code>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/bored_button.gif?raw=true">&nbsp;&nbsp;
+</p>
+
+## Comando <code>/participantes num_participantes</code>
+
+<p id="start" align='center'>
+    <img src="https://github.com/mateustoin/Bittoin-Telegram-Bot/blob/master/img/bored_participantes.gif?raw=true">&nbsp;&nbsp;
 </p>
 
 ---
