@@ -69,7 +69,7 @@
     A vantagem de instalar dessa forma é que é rápido, simples e fácil. Porém é necessário destacar que esse método garante apenas que as principais bibliotecas utilizadas no projeto sejam instaladas nas suas versões corretas, mas não suas sub dependências. Daqui há alguns anos talvez dê errado por isso, mas não precisa se preocupar.
 </p>
 
-## Istalando pelo Pipenv
+## Instalando pelo Pipenv
 
 <p>
     Para instalar os pacotes utilizando o Pipenv é simples, primeiro garanta que o Pipenv está estalado na sua máquina, com o seguinte comando:
