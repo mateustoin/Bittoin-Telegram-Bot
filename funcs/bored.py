@@ -1,6 +1,7 @@
 # Importa bibliotecas
 import requests
 from googletrans import Translator
+from google_trans_new import google_translator 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 class Bored(object):
@@ -74,16 +75,15 @@ class Bored(object):
        
         # Se requisição deu certo, traduz atividade e envia para usuário
         else:
-            translator = Translator()
+            translator = google_translator()  
             atividade_traduzida = req_bored.json()['activity']
-            atividade_traduzida = translator.translate(atividade_traduzida, dest='pt').text
+            atividade_traduzida = translator.translate(atividade_traduzida, lang_tgt='pt')
             num_participants = req_bored.json()['participants']
             
             del(translator)
             print('requisicao feita')
             query.edit_message_text(text=f"Atividade sugerida: {atividade_traduzida}\n" +
                                         f"Quantidade de participantes: {num_participants}")
-        
         
     def participantes(self, update, context):
         """[Resumo]
@@ -114,9 +114,9 @@ class Bored(object):
         
         # Se requisição deu certo, traduz atividade e envia para usuário
         else:
-            translator = Translator()
+            translator = google_translator()  
             atividade_traduzida = requisicao.json()['activity']
-            atividade_traduzida = translator.translate(atividade_traduzida, dest='pt').text
+            atividade_traduzida = translator.translate(atividade_traduzida, lang_tgt='pt')
             num_participants = requisicao.json()['participants']
             
             del(translator)
