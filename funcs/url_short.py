@@ -10,7 +10,7 @@ class Urlshort(object):
         """[Resumo]
         Define URL base da API (rel.ink) que será utilizada em todas as requisições.
         """
-        self.url_base = 'https://rel.ink/api/links/'
+        self.url_base = 'https://cleanuri.com//api/v1/shorten'
         
     def url(self, update, context):
         """[Resumo]
@@ -32,14 +32,14 @@ class Urlshort(object):
         req_url = requests.post(self.url_base, data=data)
         
         # Se a requisição deu errado, retorna mensagem de erro
-        if (req_url.status_code != 201):
+        if (req_url.status_code != 200):
             context.bot.send_message(chat_id=update.effective_chat.id, 
                                 text='URL inválida! (Experimente com https:// ou http:// antes)')
             return
         
         # Se a requisição deu certo, coleta 'hashid' do encurtador e retorna URL pronta
         else:
-            url_curta = 'https://rel.ink/' + req_url.json()['hashid']
+            url_curta = req_url.json()['result_url']
             
             context.bot.send_message(chat_id=update.effective_chat.id, 
                                 text='Sua url encurtada: ' + url_curta)
