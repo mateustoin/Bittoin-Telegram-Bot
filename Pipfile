@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-googletrans = "*"
-python-telegram-bot = "*"
-requests = "*"
+python-telegram-bot = "13.1"
+requests = "2.25.1"
+google-trans-new = "1.1.9"
 
 [dev-packages]
 
