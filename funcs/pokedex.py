@@ -1,5 +1,5 @@
 # Import das bibliotecas
-from googletrans import Translator
+from google_trans_new import google_translator 
 import requests
 
 class Pokedex(object):
@@ -81,7 +81,7 @@ class Pokedex(object):
         else:
             descricao_habilidade = []
             nome_habilidade = []
-            translator = Translator()
+            translator = google_translator() 
             
             for ab in requisicao.json()['abilities']:
                 nome_habilidade.append(ab['ability']['name'])
@@ -90,7 +90,7 @@ class Pokedex(object):
                 
                 for desc in req_habilidade.json()['effect_entries']:
                     if desc['language']['name'] == 'en':
-                        descricao_traduzida = translator.translate(desc['effect'], dest='pt').text
+                        descricao_traduzida = translator.translate(desc['effect'], lang_tgt='pt')
                         descricao_habilidade.append(descricao_traduzida)
                         break
                 

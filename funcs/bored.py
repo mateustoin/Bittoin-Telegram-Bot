@@ -1,6 +1,5 @@
 # Importa bibliotecas
 import requests
-from googletrans import Translator
 from google_trans_new import google_translator 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
