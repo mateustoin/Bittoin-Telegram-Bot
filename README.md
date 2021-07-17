@@ -72,7 +72,7 @@
 ## Instalando pelo Pipenv
 
 <p>
-    Para instalar os pacotes utilizando o Pipenv é simples, primeiro garanta que o Pipenv está estalado na sua máquina, com o seguinte comando:
+    Para instalar os pacotes utilizando o Pipenv é simples, primeiro garanta que o Pipenv está instalado na sua máquina, com o seguinte comando:
 </p>
 
 > <code>pip install pipenv</code>
