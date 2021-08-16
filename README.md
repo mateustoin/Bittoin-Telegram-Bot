@@ -155,6 +155,14 @@ self.updater.start_polling()
 self.updater.idle()
 ```
 
+### Possíveis erros
+
+#### Erro com o google translator
+
+<p>
+    Caso haja algum erro na execução do projeto relacionado as requisições que envolvem erro na tradução, acessar <a href="https://stackoverflow.com/questions/68214591/python-google-trans-new-translate-raises-error-jsondecodeerror-extra-data">esse link </a> com a solução.
+</p>
+
 ## Exemplos
 
 <p>
